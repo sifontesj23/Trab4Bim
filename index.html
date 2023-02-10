@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- Especifica que a pag foi escrita em HTML, tag pai de todas as outras tag da pagina -->
+
+<head> <!-- para espicificar meta, nome da pagina, dependencias (CSS, bootstrap)-->
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"> <!-- link para utilizar Bootstrap para desenvolvimento de componentes de interface e front-end -->
+  <link rel="stylesheet" href="style.css"> <!-- link para utilizar CSS para tornar  pagina mais Bonita-->  
+  <title>Lista de Tarefas</title> <!-- Titulo/Nome da pagina a ser visto na barra de navegacão -->
+</head>
+<body> <!-- Tudo o que usuario ve è escrito aqui -->
+  <div class="container-fluid"> <!-- Bloco primario-->
+    <div class="row"><!-- Tambem sub-Bloco Primario-->
+      <div class="col-sm-4"> <!-- Bloco onde vai a imagem -->
+        <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.5s" src="https://www.mstech.com.br/webshared/mstech.com.br/solucoes/Logos/diario-classe.png" 
+        alt="Tarefas" > <!-- imagen de libreta, o src ê URL ou camino onde a imagen esta localizada-->
+      </div>
+      <div class="col-sm-8" id="divQuadro"> <!-- Bloco onde vai os botãos e caixa para prencher form -->
+        <h1>Tarefas do Dia (a realizar)</h1> <!-- texto para exclarer a funÇao -->
+        <form> <!-- inicio do Formulario-->
+          <p><label for="inTarefa">Tarefa:</label> 
+            <input type="text" class="form-control" id="inTarefa" required autofocus>
+          </p> <!-- parrafo onde temos um "label e um input tipo texto" o label dai destaque da funcÇao e input para receber informaÇcao em texto-->
+          <p><input type="submit" class="btn btn-primary" value="Adicionar &#10003;">
+            <input type="button" class="btn btn-info" 
+                   value="Selecionar &#8645;" id="btSelecionar"> <!-- /body e /html -->
+            <input type="button" class="btn btn-danger" 
+                   value="Retirar Selecionada &#10007;" id="btRetirar">
+            <input type="button" class="btn btn-success" 
+                   value="Gravar &#9673;" id="btGravar">
+          </p> <!-- parrafo: onde temos 4 input de tipo botoes)-->
+        </form> <!--Fim do formulaio-->
+      </div>
+    </div>
+  </div>
+  <script src="lista.js"></script>  <!-- link para utilizar JavaSript para tornar  pagina dinamica-->
+  
+</body>
+
+</html>
